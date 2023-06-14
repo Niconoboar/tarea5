@@ -1,0 +1,134 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fondoPrimario: #FCF7F8;
+	--colorOscuro: #1A1E21;
+	--azulPrimario: #3860EC;
+	--azulSecundario: #2247ce;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+
+/* ? ------------- Estilos del Formulario ------------- */
+
+.formulario .grupo {
+	margin-bottom: 60px;
+}
+
+.formulario .grupo > input {
+	height: 50px;
+	width: 100%;
+	border-radius: 3px;
+	border: none;
+	padding: 20px;
+	border: 1px solid rgba(0,0,0,.2);
+}
+
+.formulario .grupo > label {
+	display: block;
+	color: var(--colorOscuro);
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.formulario .radio input,
+.formulario .checkbox input {
+	margin-right: 10px;
+}
+
+.formulario .checkbox label {
+	margin-right: 20px;
+}
+
+
+.boton {
+	width: 100%;
+	background: var(--azulPrimario);
+	display: inline-block;
+	padding: 25px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	transition: .3s ease all;
+}
+
+.boton:hover {
+	background: var(--azulSecundario);
+}
+
+
+/* ? ------------- Pseudoclases ------------- */
+.formulario .nombre:focus{
+	border: 3px solid var(--azulPrimario);
+}    /*:focus es una pseudo-clase que se aplica cuando el campo de entrada está en estado de enfoque, es decir, CUANDO SE HACE CLICK se selecciona el campo para ingresar texto.*/
+
+
+.formulario .id:disabled{
+	background: black;
+	color: chartreuse; /*porqué no se cambia el color de mi texto?*/
+}    /*:disabled es una pseudo-clase que nos permite aplicar estilos a elementos que estén deshabilitados*/
+
+
+.formulario .correo:invalid { 
+	background-color: red;
+	border: none;
+}    /*Esta pseudoclase se aplica cuando el contenido del campo de entrada no cumple con las restricciones, en el caso de un campo de correo electrónico, si el valor ingresado no tiene el formato correcto de una dirección de correo electrónico válida.*/
+.formulario .correo:valid { 
+	background-color: rgb(71, 209, 66);
+	border: none;
+}    /*Esta pseudoclase se aplica cuando el contenido del campo de entrada cuando el valor ingresado es válido según las reglas establecidas, como en el caso de un campo de correo electrónico con una dirección de correo electrónico válida.*/
+
+
+.formulario .mensaje:required{
+	background: black;
+	color: chartreuse;
+}    /* La pseudo-clase :required permite que se pueda aplicar estilos específicos a los campos de entrada marcados como obligatorios. Esto puede ayudar a resaltar visualmente los campos requeridos y proporcionar retroalimentación visual a los usuarios.*/
+
+
+.formulario .radio input:checked{
+	box-shadow: 0px 0px 10px 5px var(--colorOscuro);
+}    /*La pseudoclase `:checked` permite aplicar estilos a elementos seleccionados para cambiar su apariencia y proporcionar retroalimentación visual.*/
+
+
+.formulario .checkbox input:default{
+	box-shadow: 0px 0px 10px 5px var(--azulPrimario);
+}    /*La pseudoclase `:default` se utiliza para aplicar estilos a elementos que tienen el estado predeterminado o seleccionado por defecto.*/
+
+
+.formulario .edad:in-range{
+	background-color: rgb(135, 206, 11);
+	border: none;
+}
+.formulario .edad:out-of-range{
+	background-color: rgb(171, 12, 44);
+	border: none;
+}

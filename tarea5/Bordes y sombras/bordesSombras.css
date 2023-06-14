@@ -1,0 +1,32 @@
+/*----------SOMBRAS---------*/
+h1 {
+    text-shadow: 5px 5px 3px rgb(121, 121, 121);
+  }  /* text-shadow: offset-x offset-y blur-radius color; Esta propiedad se utiliza para agregar sombras al texto dentro de ese elemento. offset-x para despazamienro horizontal de la sombra con respecto al texto. 
+  offset-y para desplazamiento vertical de la sombra con respecto al texto. 
+  blur-radius define el nivel de desenfoque aplicado a la sombra. 
+  color establece el color de la sombra.*/
+
+  section{
+       box-shadow: 1px 2px 3px 5px rgb(0, 255, 4);
+  } /* box-shadow: offset-x offset-y blur-radius spread-radius color;  Esta propiedad se utiliza para agregar sombras a un elemento en su conjunto, incluyendo su contenido y margen.
+  offset-x especifica el desplazamiento horizontal de la sombra con respecto al elemento. 
+  offset-y especifica el desplazamiento vertical de la sombra con respecto al elemento.
+  blur-radius define el nivel de desenfoque aplicado a la sombra.*/
+
+/*---------------SOMBRAS---------------*/
+  /*Para  aplicar un estilo de borde específico a un lado en particular, se puede utilizar las propiedades individuales que controlan cada lado del borde: border-top, border-right, border-bottom y border-left*/
+  
+  section{
+    border-radius: 10px;
+  }/* border-radius: valor; se utiliza para   
+    establecer el radio de los bordes de un elemento. Permite dar forma redondeada a los bordes, creando esquinas suavizadas en lugar de bordes rectos. 
+    También es posible especificar diferentes radios para cada esquina del elemento utilizando border-radius: valor1 valor2 valor3 valor4;
+    Donde valor1 es para la esquina superior izquierda, valor2 para la esquina superior derecha, valor3 para la esquina inferior derecha y valor4 para la esquina inferior izquierda.*/
+
+  section{
+    border: 4px rgb(0, 0, 0) dashed;
+  } /* border: ancho color estilo;
+  se utiliza para establecer los estilos de los bordes de un elemento. 
+  "ancho" especifica el ancho del borde, puede ser un número seguido de una unidad de medida o una palabra clave como thin, medium o thick
+  "color" establece el color del borde
+  "estilo" define el estilo del borde, que puede ser uno de los siguientes valores: solid (sólido), dotted (punteado), dashed (discontinuo), double (doble línea), groove (surco), ridge (cresta), inset (hundido) o outset (relieve).

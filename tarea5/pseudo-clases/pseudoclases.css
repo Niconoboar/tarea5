@@ -1,0 +1,158 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fondoPrimario: #FCF7F8;
+	--colorOscuro: #1A1E21;
+	--azul: #3860EC;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+ul {
+	margin: 0;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+.grupo {
+	padding: 60px 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.grupo div p,
+.grupo div div,
+.grupo div span,
+.grupo ul li {
+	background: #dbdbdb;
+	padding: 10px;
+}
+
+/* ? ------------- PSEUDO-CLASES ------------- */
+
+/* ? --- --- --- --- ENLACES --- --- --- --- */
+
+.enlace:active{
+	background-color: black;  /*cambia el color AL DAR CLICK*/
+}
+.enlace:link{
+	color: chartreuse;    /*cambia el estado del enlace cuando AUN NO ENTRAMOS AL ENLACE*/
+}
+.enlace:visited{
+	color: #ff0000;    /* Xambia el estado de enlace en ENLACES YA VISITADOS*/
+}
+.enlace:hover{
+	color: chocolate;    /* Cambia el estado de enlace en ENLACES POR LOS QUE PASES EL CURSOR*/
+}
+
+/*
+/* ? --- --- --- --- PARRAFOS --- --- --- --- */
+.parrafos p:first-child{
+	background-color: var(--azul);  
+	color: #dbdbdb;
+	/*Cambia el estado del PRIMER PARRAFO sin la necesidad de ponerle una clase, esta pseudoclase sirve para dar estilos solo al primer parrafo dentro del div clas= "parrafos"*/
+} 
+.parrafos p:last-child{
+	background-color: #000;  
+	color: #dbdbdb;
+	/*Cambia el estado del ULTIMO PARRAFO sin la necesidad de ponerle una clase, esta pseudoclase sirve para dar estilos solo al ultimo parrafo dentro del div clas= "parrafos"*/
+} 
+/* ? --- --- --- --- ELEMENTOS --- --- --- --- */
+
+.elementos p:first-of-type{
+	background-color: #000;  
+	color: #dbdbdb; /* Cambia el estado al PRIMER PARRAFO*/
+	/* la etiqueta anterior se aplica para el primer parrafo pero no para el primer elemento a continuacion mas etiquetas*/}
+
+.elementos span:first-of-type{
+	background-color: #bcc820;  
+	color: #0d0d0d; /* Cambia el estado al PRIMER SPAN*/}
+.elementos div:first-of-type{
+	background-color: #d38b1f;  
+	color: #0d0d0d; /* Cambia el estado al PRIMER DIV*/}
+
+	/*  PARA LAS ULTIMAS  */
+	
+	.elementos p:last-of-type{
+	background-color: #adaaaa;  
+	color: #000000; /* Cambia el estado al ULTIMO PARRAFO*/
+	}
+	
+	.elementos div:last-of-type{
+	background-color: #090909;  
+	color: #b06923; /* Cambia el estado al ULTIMO DIV*/}
+
+/* ? --- --- --- --- LISTA --- --- --- --- */
+
+.lista :nth-child(odd){
+	background-color: #615f5f;  
+	color: #7fb023; /*:nth-child(odd){ Cambiar el estado de los ELEMENTOS PARES DENTRO DE UNA LISTA*/
+}
+.lista :nth-child(even){
+	background-color: #4f1b6f;  
+	color: #ffffff;/*:nth-child(EVEN){ Cambiar el estado de los ELEMENTOS IMPARES DENTRO DE UNA LISTA*/}
+.lista :nth-child(5){
+	background-color: #090909;  
+	color: #fd7e00;
+}
+.lista :nth-child(4){
+	background-color: #090909;  
+	color: #23fc01; /* :nth-child(n){ te permite cambiar el estado de UN UNICO ELEMENTO DENTRO DE UNA LISTA*/}
+	.lista :nth-child(8) {
+	background-color: #e52b2b;
+	color: #23fc01;    /* :nth-child(n) selecciona todos los ELEMENTOS QUE SON EL N-ÉSIMO elemento, donde "n" es un número entero*/   }
+     .lista :nth-last-child(2){
+	background-color: #00fd2e;  
+	color: #ff0000;/* se utiliza para seleccionar elementos específicos de una lista o grupo de elementos CONTANDO DESDE EL FINALl*/}
+	 
+
+/* ? --- --- --- --- LISTA 2 --- --- --- --- */
+
+.lista2 p:nth-of-type(2){
+	background-color: #090909;  
+	color: #23fc01; 
+	/* .lista2 p:nth-of-type(2){ Sirve para seleccionar n posicion SOLO DE PARRAFOS sin importar si estan adelante otros elementos <p> que se encuentran dentro de la clase .lista2 sim importar su posicion con respecto a otro tipo de elementos que no sean <p> dentro de .lista2*/	
+	}
+	.lista2 div:nth-last-of-type(2){
+	background-color: #090909;  
+	color: #ff9d00;	/*Permite acceder a un div CONTANDO DE ABAJO HACIA ARRIBA*/	
+	}
+
+/* ? --- --- --- --- LISTA 3 --- --- --- --- */
+	.lista3 p:only-child{ 
+	background-color: #090909;
+	color: #23fc01; /*Esta pseudoclase permite cambiar los atributos de UN UNICO PARRAFO*/
+	}
+
+/* ? --- --- --- --- LISTA 4 --- --- --- --- */
+.lista4 p:only-of-type{
+	background-color: #090909;	
+	color: #23fc01; /*Esta pseudoclase permite cambiar los atributos DE TODOS LOS PARRAFOS DENTRO DE UN DIV*/
+}
